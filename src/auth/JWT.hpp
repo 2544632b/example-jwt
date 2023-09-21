@@ -6,7 +6,6 @@
 #include "oatpp/core/Types.hpp"
 
 #include <jwt-cpp/jwt.h>
-#include <picojson/picojson.h>
 
 class JWT {
 public:
