@@ -6,6 +6,7 @@
 #include "oatpp/core/Types.hpp"
 
 #include <jwt-cpp/jwt.h>
+#include <picojson/picojson.h>
 
 class JWT {
 public:
@@ -19,7 +20,7 @@ public:
 private:
   oatpp::String m_secret;
   oatpp::String m_issuer;
-  jwt::verifier<jwt::default_clock, jwt::picojson_traits> m_verifier;
+  jwt::verifier<jwt::default_clock, jwt::traits::kazuho_picojson> m_verifier;
 public:
 
   JWT(const oatpp::String& secret,
